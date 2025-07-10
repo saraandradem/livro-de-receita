@@ -1,0 +1,76 @@
+/* Resetando o padrão do navegador*/
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Estilo geral do corpo do site */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8f5e9;/* verde claro:fundo leve e saudável*/
+    color: #333333; /*cinza escuro: texto legível*/
+    padding: 20px;
+}
+/* Cabeçario com titulo e descrição*/
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+h1 {
+    color: #4CAF50; /* verde escuro: remete a saúde */
+    margin-bottom: 10px;
+}
+p {
+    font-size: 16px;
+}
+/*área onde os cards das receitas irá aparecer*/
+#receitas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+/*estilo individual de cada receita*/
+.receita-card {
+    background: #FFFFFF; /* branco:visual limpo e moderno */;
+    border-radius: 10px; /* bordas arrendondadas*/
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+.receita-card:hover{
+    transform: scale(1.02);/* efeito de zoom ao passar o mouse */
+}
+/* imagem da receita */
+.receita-card img {
+    width :100%;
+    border-radius: 8px; /*bordas arrendodadas nas imagens*/
+    margin-bottom: 10px;
+}
+/* título da receita */
+.receita-card h3 {
+    color: #4CAF50; /* verde escuro remete saude */
+    margin-bottom: 10px;
+}
+/* lista de ingredientes */
+.receita-card ul {
+    margin-bottom: 10px;
+    padding-left: 20px; /*espaço entre a lista e a borda*/
+}
+/* rodape*/
+footer {
+    text-align: center;
+    margin-top: 40px;
+    fobt-size: 14px;
+    color: #666; /*cinza claro: texto menos importante*/
+}
+/* estilo para botões se quiser */
+button {
+    background-color: #FF9800;;/* laranja chama atenção*/
+    color: white; /*texto branco para contraste*/
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px; /*bordas arrendondadas*/
+    cursor: pointer;
+    font: size 14px;
+}
