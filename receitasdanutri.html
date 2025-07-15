@@ -1,24 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receitas da Nutri</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Receitas da Nutri</title>
+  <link rel="stylesheet" href="receitasdanutri.css" />
 </head>
 <body>
-    <header>
-        <h1> Receitas da nutri </h1>
-        <p>Receitas para mudar sua vida por Hylly Bertrand</p>
-    </header>
-    <main>
-        <section id = "receitas-contrainer">
-        </section>
-    </main>
-    <footer>
-        <p> Desenvolvido por Sara Andrade</p>
-    </footer>
-    <script src="script.js"></script>
+  <header>
+    <h1>Receitas da Nutri</h1>
+    <p>Dicas para mudar sua vida por Hylly Bertrand.</p>
+  </header>
 
+  <main>
+    <nav>
+      <button onclick="mostrarSecao('nutricionista')">👩‍⚕️ Conheça a Nutri</button>
+      <button onclick="mostrarSecao('contato')">📞 Contato</button>
+      <button onclick="mostrarSecao('receitas')">🍽️ Receitas</button>
+      <button onclick="mostrarSecao('dicas')">🛒 Dicas de Mercado</button>
+    </nav>
+
+    <!-- Seção Nutricionista -->
+    <section id="nutricionista" class="secao">
+      <h2>👩‍⚕️ Sobre a Nutri</h2>
+      <img src="nutri.jpeg" alt="Nutricionista Hylly Bertrand" class="nutri-foto" />
+      <p>
+        <strong>Oi, eu sou a Hylly! 💚</strong><br><br>
+
+        Sou nutricionista há mais de 6 anos, com especialização em Nutrição Esportiva. Desde cedo, a alimentação sempre foi parte da minha vida , minha mãe é vegetariana, e isso despertou em mim uma curiosidade enorme sobre os alimentos e seus nutrientes.<br><br>
+
+        Com apenas 14 anos, decidi que queria ser nutricionista, e desde então venho trilhando esse caminho com muito amor! Sou apaixonada por movimento e bem-estar. Já pratiquei lutas, me encantei pelo CrossFit e, hoje, venho me apaixonando cada vez mais pela musculação 💪.<br><br>
+
+        <strong>Minha missão?</strong> Te ajudar a ter uma relação mais leve e saudável com a comida, entendendo que nutrição pode (e deve!) ser simples.<br><br>
+
+        Aqui, o meu acompanhamento vai muito além de uma dieta: ✨ Trabalho com foco em performance, ganho de massa magra e emagrecimento saudável, sempre respeitando o seu ritmo e sua individualidade.<br><br>
+
+        Quero te mostrar que é possível cuidar da saúde com leveza e prazer, e que você pode, sim, se apaixonar por esse processo. Criei esse site para facilitar o seu dia a dia, tirar dúvidas comuns e compartilhar receitinhas práticas e gostosas, que cabem na sua rotina.<br><br>
+
+        Conto com você nessa jornada. Vamos juntos? 🌿
+      </p>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="secao">
+      <h2>📞 Entre em Contato</h2>
+      <p>📧 Email: hylly.nutri@email.com</p>
+      <p>📱 Instagram: @nutri.hylly</p>
+      <p>💬 WhatsApp: <a href="https://wa.me/5531991777324" target="_blank">Clique aqui para conversar</a></p>
+    </section>
+
+    <!-- Seção Receitas -->
+    <section id="receitas" class="secao active">
+      <h2>🍽️ Receitas Saudáveis</h2>
+      <div id="receitas-container"></div>
+    </section>
+
+    <!-- Seção Dicas -->
+    <section id="dicas" class="secao">
+      <h2>🛒 Dicas de Mercado</h2>
+      <div id="dicas-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Desenvolvido por Sara Andrade</p>
+  </footer>
+
+  <script src="receitas.js"></script>
 </body>
 </html>
+

@@ -1,76 +1,171 @@
 /* Resetando o padrão do navegador*/
 * {
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-/* Estilo geral do corpo do site */
 
+/* Estilo geral do corpo do site */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #e8f5e9;/* verde claro:fundo leve e saudável*/
-    color: #333333; /*cinza escuro: texto legível*/
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #e8f5e9; /* verde claro:fundo leve e saudável */
+  color: #333333; /* cinza escuro: texto legível */
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-/* Cabeçario com titulo e descrição*/
+
+/* Cabeçario com titulo e descrição */
 header {
-    text-align: center;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 }
+
 h1 {
-    color: #4CAF50; /* verde escuro: remete a saúde */
-    margin-bottom: 10px;
+  color: #4CAF50; /* verde escuro: remete a saúde */
+  margin-bottom: 10px;
 }
+
 p {
-    font-size: 16px;
+  font-size: 16px;
 }
-/*área onde os cards das receitas irá aparecer*/
+
+/* Container das receitas */
 #receitas-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
 }
-/*estilo individual de cada receita*/
+
+/* Estilo individual de cada receita */
 .receita-card {
-    background: #FFFFFF; /* branco:visual limpo e moderno */;
-    border-radius: 10px; /* bordas arrendondadas*/
-    padding: 15px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease;
+  background: #FFFFFF; /* branco: visual limpo e moderno */
+  border-radius: 10px; /* bordas arredondadas */
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
 }
-.receita-card:hover{
-    transform: scale(1.02);/* efeito de zoom ao passar o mouse */
+
+.receita-card:hover {
+  transform: scale(1.02); /* efeito de zoom ao passar o mouse */
 }
+
 /* imagem da receita */
 .receita-card img {
-    width :100%;
-    border-radius: 8px; /*bordas arrendodadas nas imagens*/
-    margin-bottom: 10px;
+  width: 100%;
+  border-radius: 8px; /* bordas arredondadas nas imagens */
+  margin-bottom: 10px;
 }
+
 /* título da receita */
 .receita-card h3 {
-    color: #4CAF50; /* verde escuro remete saude */
-    margin-bottom: 10px;
+  color: #4CAF50; /* verde escuro remete saúde */
+  margin-bottom: 10px;
 }
+
 /* lista de ingredientes */
 .receita-card ul {
-    margin-bottom: 10px;
-    padding-left: 20px; /*espaço entre a lista e a borda*/
+  margin-bottom: 10px;
+  padding-left: 20px; /* espaço entre a lista e a borda */
 }
-/* rodape*/
+
+/* Estilo para o nav e botões */
+nav {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+nav button {
+  background-color: #4CAF50; /* verde */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+  background-color: #388E3C; /* verde escuro ao passar mouse */
+}
+
+/* Container das dicas */
+#dicas-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Cartão de dica */
+.dica-card {
+  background: #FFFDE7; /* amarelo claro, suave e amigável */
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.dica-card:hover {
+  transform: scale(1.02);
+}
+
+.dica-card h3 {
+  color: #F57C00; /* laranja para destaque */
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.dica-card p {
+  font-size: 15px;
+  color: #555;
+}
+
+/* Ajuste para o main para ter um max-width e centralizar */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  flex: 1;
+}
+
+/* Seções */
+.secao {
+  display: none;
+  margin-bottom: 30px;
+}
+
+.secao.active {
+  display: block;
+}
+
+/* Opcional: animação simples para as seções aparecendo */
+.secao {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* ======= Ajuste para o rodapé fixo ======= */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 footer {
-    text-align: center;
-    margin-top: 40px;
-    fobt-size: 14px;
-    color: #666; /*cinza claro: texto menos importante*/
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666; /* cinza claro */
+  padding: 10px 0;
+  background-color: #f1f1f1; /* fundo leve para destacar */
 }
-/* estilo para botões se quiser */
-button {
-    background-color: #FF9800;;/* laranja chama atenção*/
-    color: white; /*texto branco para contraste*/
-    padding: 10px 15px;
-    border: none;
-    border-radius: 8px; /*bordas arrendondadas*/
-    cursor: pointer;
-    font: size 14px;
-}
+
